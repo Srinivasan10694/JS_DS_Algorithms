@@ -42,3 +42,32 @@ for (let i = 0; i < str1.length; i++){
 
 // stringChar('Java')
 
+// Palindrome Check
+
+function isPalindrome (str){
+    let formattedStr = str.toLowerCase().split('').reverse().join('')
+    if(str===formattedStr){
+        console.log("Palindrome")
+    }else {
+        console.log("Not a Palindrome")
+    }
+}
+
+// isPalindrome('racecars')
+
+// Removing duplicates in an array
+
+function removeDuplicates(arr){
+    let uniqueArr = []
+    for(let i = 0; i < arr.length; i++){
+        if((!uniqueArr.includes(arr[i]))){
+            uniqueArr.push(arr[i])
+        }
+    }
+    console.log(uniqueArr)
+}
+let array = [1,2,3,5,2,8,1,2,8]
+removeDuplicates(array)
+
+let ansArray = new Set(array)
+console.log(ansArray)
