@@ -67,7 +67,50 @@ function removeDuplicates(arr){
     console.log(uniqueArr)
 }
 let array = [1,2,3,5,2,8,1,2,8]
-removeDuplicates(array)
+// removeDuplicates(array)
 
 let ansArray = new Set(array)
-console.log(ansArray)
+// console.log(ansArray)
+
+//Finding secondLargest Number in an array
+
+function secondLargest(arr){
+    let firstMax = arr[0];
+    let secondMax = arr[1];
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i]>firstMax){
+            secondMax = firstMax;
+            firstMax = arr[i];
+        }else if(arr[i]<firstMax && arr[i]>secondMax){
+            secondMax = arr[i]
+        }
+    }
+    console.log(secondMax)
+}
+
+let values = [23,1,55,12,456,86,456]
+
+// secondLargest(values)
+
+const users = [
+    { name: 'John', age: 30 },
+    { name: 'Jane', age: 25 },
+    { name: 'Jim', age: 35 }
+  ];
+
+  let sortedUers = users.sort((a,b) => a.age - b.age)
+//   console.log(sortedUers)
+
+  function twoSum(arr,target){
+    let sumArr = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i]+arr[i+1] == target){
+            sumArr.push(i,i+1)
+        }
+    }
+    console.log(sumArr)
+}
+
+let sumArr = [1,2,4,5]
+twoSum(arr,9)
