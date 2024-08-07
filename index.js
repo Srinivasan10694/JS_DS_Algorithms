@@ -113,4 +113,12 @@ const users = [
 }
 
 let sumArr = [1,2,4,5]
-twoSum(arr,9)
+// twoSum(arr,9)
+
+function longestSubstring (str){
+    let str1 = str.split('')
+    console.log(str1)
+
+}
+
+longestSubstring('abcabcbb')
